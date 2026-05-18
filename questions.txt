@@ -1,0 +1,43 @@
+## Povinný okruh: Termomechanika a Spalování
+1. První zákon termomechaniky dva základní tvary, význam veličin a způsob jejich určování. Druhý zákon termodynamiky, podstata, matematická formulace. Určení změny entropie základních vratných změn stavu. Průběh základních vratných změn v diagramu T-s.
+2. Základní vratné změny stavu ideálního plynu, rovnice změny, průběh diagramu p-v a T-s, vztah mezi veličinami stavu, sdělené teplo, vykonaná práce.
+3. Tepelné oběhy, přivedené a odvedené teplo, expanzní a kompresní práce, termická účinnost. Oběhy přímé a obrácené.
+4. Porovnávací cykly pístových motoru (výbušného, rovnotlakého, smíšený) a spalovací turbíny. Určení termické účinnosti a vykonané práce.
+5. Stroje na stlačování a dopravu vzdušin, rozdělení. Jednostupňová a vícestupňová komprese. Vliv škodlivého prostoru, důvody vícestupňové komprese, příkon kompresoru.
+6. Reálný plyn, zjednodušený výpočet reálných plynů. Směsi plynů. Adiabatické míšení v proudu.
+7. Páry, základní pojmy. Jednoduchý ideální parní cyklus, schéma, T-s diagram. Zvyšování účinnosti cyklu přihříváním páry a regenerativním ohřevem napájecí vody.
+8. Vlhký vzduch a vlhké technické plyny. Absolutní, relativní a měrná vlhkost vzduchu. Entalpie vlhkého vzduchu a jeho tepelný diagram, vlhčení.
+9. Základní druhy přenosu tepla a jejich stručná charakteristika. Základní pojmy a zákony.
+10. Stacionární vedení a prostup tepla neomezenou stěnou rovinnou, jednoduchou i složenou.
+11. Stacionární vedení a prostup tepla neomezenou stěnou válcovou, jednoduchou i složenou.
+12. Základní zákony sálání absolutně černého tělesa. Sálání skutečných těles. Přenos tepla sáláním mezi dvěma šedými povrchy oddělenými dokonale průteplivým prostředím, soustava uzavřená.
+13. Rekuperační výměníky tepla. Rovnice tepelné bilance a sdílení tepla. Určení středního logaritmického rozdílu teplot a velikosti teplosměnné plochy.
+14. Paliva, rozdělení paliv, charakteristiky a složení paliv.
+15. Výhřevnost a spalné teplo, způsoby stanovení, přepočty.
+16. Statika spalování vodíku.
+17. Statika spalování uhlíku a síry.
+18. Výpočet množství spalovacího vzduchu pro spalování tuhých paliv.
+19. Výpočet množství spalin pro spalování tuhých paliv.
+20. Přebytek spalovacího vzduchu.
+
+## Povinně volitelný okruh: Provoz energetických zařízení
+21. Energie (pojem, význam, jednotky, zdroje na Zemi).
+22. Spalovací zařízení pro různé druhy paliv, princip a popis.
+23. Tepelně energetické výrobny, druhy, výkony, účinnosti a vybavení.
+24. Parní kotle – typy, hlavní části, transformace energie, účinnost.
+25. Uhlí (parametry, využití, zdroje, spotřeby v ČR a ve světě).
+26. Plynná paliva (vlastnosti, využití, druhy, zdroje, spotřeby v ČR a ve světě).
+27. Kapalná paliva (vlastnosti, využití, druhy, zdroje, spotřeby v ČR a ve světě).
+28. Jaderná energie (využití v ČR a ve světě, typy elektráren a reaktorů).
+29. Nové technické směry vývoje v energetice (paroplynové a nadkritické zdroje).
+30. Energetické stroje, rozdělení, princip činností a použití, transformace energie.
+31. Rozdělení kompresorů, hlavní technické parametry, princip činnosti, účinnost.
+32. Pístové kompresory, hlavní části, popis, princip činnosti, výkonnost teoretická a skutečná, způsoby regulace.
+33. Rotační kompresory, rozdělení, hlavní části, popis, princip činnosti, rázová komprese a expanze.
+34. Radiální turbokompresory, hlavní části, popis, princip činnosti, proudění plynu pracovním prostorem, tvary rotorových lopatek, Eulerova rovnice.
+35. Axiální turbokompresory, hlavní části, popis, princip činnosti, proudění plynu pracovním prostorem, rovinná lopatková mříž.
+36. Hydrodynamická čerpadla, princip činnosti, transformace energie a základní pojmy při jejich provozu, regulace.
+37. Energetické charakteristiky, paralelní a sériová spolupráce kompresorů a čerpadel.
+38. Parní turbíny, rozdělení, popis, princip činnosti, rozdíl mezi akčním a reakčním stupněm axiální parní turbíny.
+39. Spalovací turbíny, hlavní části, popis, princip činnosti, využití v energetice.
+40. Měření v energetice. Základy měření teplot, tlaků, průtoku, plynných složek spalin.
