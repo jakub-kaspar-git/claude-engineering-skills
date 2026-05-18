@@ -78,7 +78,8 @@ Dokument musí být vizuálně bohatý a srozumitelný. Ke každé otázce gener
 - Záhlaví: název otázky, okruh, datum (automaticky přes `create_document()`)
 - Část 1: Teoretický rozbor (hlavní obsah, ~55 % dokumentu) — s diagramy, schématy, přehledovými tabulkami
 - Část 2: Praktický rozbor (~25 % dokumentu) — se srovnávacími tabulkami, příklady z praxe
-- Část 3: Ilustrační příklad (~20 % dokumentu) — s grafem výsledků
+- Část 3: Ilustrační příklad (~15 % dokumentu) — s grafem výsledků
+- Část 4: Typické zkouškové otázky (~10 % dokumentu) — 5–8 otázek s odpověďmi
 - Zápatí: odkazy na normy a zdroje
 
 ## Stránkování a rozložení — POVINNÉ
@@ -123,6 +124,7 @@ Po uložení .docx se automaticky vygeneruje PDF kopie do `output/pdf/`. Řeší
 | `add_image(doc, path, width_cm, caption)` | Obrázek s popiskem |
 | `add_info_box(doc, title, text)` | Modrý info rámeček |
 | `add_warning_box(doc, text)` | Žlutý warning rámeček |
+| `add_exam_questions(doc, questions)` | Sekce zkouškových Q&A (list of (q, a) tuples) |
 | `add_styled_table(doc, headers, data, style)` | Tabulka s formátovaným záhlavím |
 | `add_page_break(doc)` | Konec stránky |
 | `latex_to_omml(latex_str)` | LaTeX → OMML element |

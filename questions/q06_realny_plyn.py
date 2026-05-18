@@ -17,7 +17,7 @@ from docx_engine import (
     create_document, save_and_export, add_heading, add_para,
     add_equation, add_bullet, add_image, add_info_box,
     add_warning_box, add_page_break, add_styled_table,
-    COLORS, IMG_DIR,
+    add_exam_questions, COLORS, IMG_DIR,
 )
 
 # ═════════════════════════════════════════════════════════════════════════════
@@ -573,6 +573,48 @@ def generate():
 
     add_image(doc, img_temp, width_cm=13,
               caption="Obr. 6: Závislost výstupní teploty T₃ na hmotnostním průtoku horkého proudu ṁ₁ (při celkovém průtoku 5 kg/s)")
+
+    # ═══════════════════════════════════════════════════════════════════════
+    # ČÁST 4: TYPICKÉ ZKOUŠKOVÉ OTÁZKY
+    # ═══════════════════════════════════════════════════════════════════════
+    add_exam_questions(doc, [
+        ("Pro\u010d nelze pou\u017e\u00edt model ide\u00e1ln\u00edho plynu bl\u00edzko kritick\u00e9ho bodu?",
+         "Bl\u00edzko kritick\u00e9ho bodu jsou mezimolekul\u00e1rn\u00ed s\u00edly a vlastn\u00ed objem molekul srovnateln\u00e9 "
+         "s termodynamick\u00fdmi veli\u010dinami \u2014 p\u0159ita\u017eliv\u00e9 s\u00edly zp\u016fsobuj\u00ed v\u00fdrazn\u00e9 odchylky tlaku a objemu "
+         "od predikce pv = rT. Kompresibilitn\u00ed faktor Z se m\u016f\u017ee odch\u00fdlit o des\u00edtky procent od jedni\u010dky."),
+
+        ("Jak\u00fd je fyzik\u00e1ln\u00ed v\u00fdznam kompresibilitn\u00edho faktoru Z a kdy je Z < 1 vs. Z > 1?",
+         "Z = pv/(rT) vyjad\u0159uje m\u00edru odchylky od ide\u00e1ln\u00edho chov\u00e1n\u00ed. Z < 1 znamen\u00e1, \u017ee p\u0159ita\u017eliv\u00e9 "
+         "mezimolekul\u00e1rn\u00ed s\u00edly dominuj\u00ed (plyn je stla\u010diteln\u011bj\u0161\u00ed ne\u017e ide\u00e1ln\u00ed) \u2014 typicky p\u0159i st\u0159edn\u00edch "
+         "tlac\u00edch. Z > 1 nast\u00e1v\u00e1 p\u0159i vysok\u00fdch tlac\u00edch, kdy dominuje odpudiv\u00fd vlastn\u00ed objem molekul."),
+
+        ("Vysv\u011btlete rozd\u00edl mezi van der Waalsovou a Peng-Robinsonovou stavovou rovnic\u00ed.",
+         "Van der Waalsova rovnice je historicky prvn\u00ed dvoukonstantov\u00e1 korekce (parametry a, b). "
+         "Je jednoduch\u00e1, ale nep\u0159esn\u00e1 (chyba 5\u201315 %). Peng-Robinsonova rovnice zav\u00e1d\u00ed teplotn\u00ed "
+         "z\u00e1vislost parametru a pomoc\u00ed acentrick\u00e9ho faktoru \u03c9 a modifikovan\u00fd \u010dlen pro objem, "
+         "\u010d\u00edm\u017e dosahuje chyby 1\u20133 % \u2014 je standardem v ropn\u00e9m a chemick\u00e9m pr\u016fmyslu."),
+
+        ("Co je z\u00e1kon koresponduj\u00edc\u00edch stav\u016f a k \u010demu slou\u017e\u00ed?",
+         "Princip, \u017ee v\u0161echny plyny se chovaj\u00ed podobn\u011b, jsou-li stavov\u00e9 veli\u010diny vyj\u00e1d\u0159eny "
+         "v redukovan\u00e9m tvaru (p_r = p/p_k, T_r = T/T_k). D\u00edky tomu sta\u010d\u00ed jeden generalizovan\u00fd "
+         "diagram Z(p_r, T_r) pro jak\u00fdkoliv plyn \u2014 pot\u0159ebujeme zn\u00e1t jen kritick\u00e9 konstanty."),
+
+        ("Jak se li\u0161\u00ed Dalton\u016fv a Amagat\u016fv z\u00e1kon pro sm\u011bsi plyn\u016f?",
+         "Dalton\u016fv z\u00e1kon: celkov\u00fd tlak je sou\u010det parci\u00e1ln\u00edch tlak\u016f slo\u017eek (p = \u03a3 p_i), plat\u00ed "
+         "p\u0159i spole\u010dn\u00e9m objemu a teplot\u011b. Amagat\u016fv z\u00e1kon: celkov\u00fd objem je sou\u010det parci\u00e1ln\u00edch "
+         "objem\u016f (V = \u03a3 V_i), plat\u00ed p\u0159i spole\u010dn\u00e9m tlaku a teplot\u011b. Pro ide\u00e1ln\u00ed plyny jsou oba "
+         "ekvivalentn\u00ed, pro re\u00e1ln\u00e9 plyny d\u00e1vaj\u00ed m\u00edrn\u011b odli\u0161n\u00e9 v\u00fdsledky."),
+
+        ("Pro\u010d je adiabatick\u00e9 m\u00ed\u0161en\u00ed nevratn\u00fd proces, i kdy\u017e Q = 0?",
+         "Proto\u017ee doch\u00e1z\u00ed ke spont\u00e1nn\u00edmu vyrovn\u00e1v\u00e1n\u00ed teplot (a p\u0159\u00edpadn\u011b slo\u017een\u00ed) mezi proudy, "
+         "co\u017e je typick\u00fd nevratn\u00fd proces. Entropie soustavy v\u017edy roste \u2014 entropie m\u00ed\u0161en\u00ed "
+         "\u0394S_mix = \u2212nR \u03a3 x_i ln x_i > 0, proto\u017ee x_i < 1 a ln x_i < 0."),
+
+        ("Jak experiment\u00e1ln\u011b ur\u010d\u00edte, zda je pro dan\u00fd plyn opr\u00e1vn\u011bn\u00e9 pou\u017e\u00edt model ide\u00e1ln\u00edho plynu?",
+         "Spo\u010d\u00edt\u00e1me redukovan\u00e9 veli\u010diny T_r = T/T_k a p_r = p/p_k. Pokud T_r > 2 a p_r < 1, "
+         "je model ide\u00e1ln\u00edho plynu dostate\u010dn\u011b p\u0159esn\u00fd (chyba < 1 %). Alternativn\u011b ode\u010dteme Z "
+         "z generalizovan\u00e9ho diagramu \u2014 pokud |Z \u2212 1| < 0,01, ide\u00e1ln\u00ed model sta\u010d\u00ed."),
+    ])
 
     # ── Zápatí: Zdroje ──
     doc.add_paragraph()

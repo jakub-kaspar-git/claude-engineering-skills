@@ -216,6 +216,47 @@ def add_warning_box(doc, text):
     doc.add_paragraph()
 
 
+def add_exam_questions(doc, questions: list):
+    """Add exam Q&A section. Each item is a (question, answer) tuple."""
+    add_page_break(doc)
+    add_heading(doc, "Část 4: Typické zkouškové otázky", level=2)
+    add_para(doc,
+        "Otázky, které mohou padnout u ústní státní závěrečné zkoušky, "
+        "s doporučenými odpověďmi.", italic=True, size=10)
+    doc.add_paragraph()
+
+    for i, (q, a) in enumerate(questions, start=1):
+        # Question as green box
+        table = doc.add_table(rows=1, cols=1)
+        table.alignment = WD_TABLE_ALIGNMENT.CENTER
+        cell = table.rows[0].cells[0]
+        shading = parse_xml(f'<w:shd {nsdecls("w")} w:fill="DCFCE7"/>')
+        cell._element.get_or_add_tcPr().append(shading)
+        for row in table.rows:
+            trPr = row._tr.get_or_add_trPr()
+            trPr.append(parse_xml(f'<w:cantSplit {nsdecls("w")}/>'))
+        p = cell.paragraphs[0]
+        _keep_together(p)
+        r = p.add_run(f"Otázka {i}: ")
+        r.bold = True
+        r.font.size = Pt(11)
+        r.font.color.rgb = RGBColor(0x16, 0x6A, 0x34)
+        r2 = p.add_run(q)
+        r2.bold = True
+        r2.font.size = Pt(11)
+        r2.font.color.rgb = RGBColor(0x16, 0x6A, 0x34)
+
+        # Answer
+        ans = doc.add_paragraph()
+        _keep_together(ans)
+        r_label = ans.add_run("Odpověď: ")
+        r_label.bold = True
+        r_label.font.size = Pt(10)
+        r_body = ans.add_run(a)
+        r_body.font.size = Pt(10)
+        doc.add_paragraph()  # spacer
+
+
 def add_styled_table(doc, headers: list, data: list, style="Light Grid Accent 1"):
     """Add a table with bold header row and consistent formatting."""
     table = doc.add_table(rows=1 + len(data), cols=len(headers))
