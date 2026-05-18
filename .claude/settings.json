@@ -1,0 +1,50 @@
+{
+  "permissions": {
+    "allow": [
+      "Read",
+      "Edit",
+      "Write(output/**)",
+      "Write(questions/**)",
+      "Write(*.py)",
+      "Write(*.txt)",
+      "Glob",
+      "Grep",
+      "Bash(python *)",
+      "Bash(python3 *)",
+      "Bash(pip install *)",
+      "Bash(pip list*)",
+      "Bash(pip show *)",
+      "Bash(mkdir -p *)",
+      "Bash(ls *)",
+      "Bash(cat *)",
+      "Bash(head *)",
+      "Bash(tail *)",
+      "Bash(wc *)",
+      "Bash(git status*)",
+      "Bash(git log*)",
+      "Bash(git diff*)",
+      "Bash(git add *)",
+      "Bash(git commit *)"
+    ],
+    "deny": [
+      "Bash(rm -rf *)",
+      "Bash(rm -r *)",
+      "Bash(del *)",
+      "Bash(git push *)",
+      "Bash(git reset --hard*)",
+      "Bash(git checkout -- *)",
+      "Bash(git clean *)",
+      "Bash(curl *)",
+      "Bash(wget *)",
+      "Bash(ssh *)",
+      "Bash(scp *)",
+      "Bash(cd /*)",
+      "Bash(cd C:*)",
+      "Bash(cd ..*)",
+      "Bash(powershell *)",
+      "Bash(cmd *)",
+      "Bash(Start-Process *)",
+      "Bash(Invoke-*)"
+    ]
+  }
+}
